@@ -5,12 +5,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --header-color: #ffffff; /* Blue color for headers */
+  --text-color: #000000;    /* White text */
+  --header-background: #000000; /* Black background for headers */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #ffffff;
+    --foreground: #ffffff;
+    --header-background: #041E42; /* Keep black background in dark mode */
   }
 }
 
@@ -18,4 +22,18 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: 300;
+}
+
+/* Styles for headers */
+h3, h4, h5, h6 {
+  color: var(--text-color); /* White text */
+  background: var(--header-background); /* Black background */
+  padding: 10px; /* Optional: Add padding for better appearance */
+}
+
+/* Specific header color */
+h1, h2 {
+  color: var(--header-color); /* Blue color for specific headers */
 }
